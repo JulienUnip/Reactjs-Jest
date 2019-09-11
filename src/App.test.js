@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { add, toto } from './App';
+import { add, toto, minus } from './App';
 
 
 /*
@@ -14,6 +14,9 @@ it('renders without crashing', () => {
 
 test( 'Fake test',() => {
   expect(true).toBeTruthy();
+
+  const isFalse = false;
+  expect(isFalse).toBeFalsy();
 });
 
 test('add', () => {
@@ -24,4 +27,9 @@ test('add', () => {
 test('toto', () => {
   const value = toto();
   expect(value).toBe('toto');
-}); 
+});
+
+test ('minus', () => {
+  const value = minus(3, 1);
+  expect(value).toBe(2);
+})
